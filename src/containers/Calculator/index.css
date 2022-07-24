@@ -1,0 +1,30 @@
+@import "../../assets/colors.css";
+
+.calculator {
+  width: 359px;
+  border-radius: 12px;
+  padding: 0px;
+  margin: 0px;
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  box-shadow: -1px 0px 0px 0px var(--bg-very-very-light-gray),
+    1px 0px 0px 0px var(--bg-very-very-light-gray);
+}
+
+.buttons {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: #242424;
+  padding-top: 5px;
+  height: 252px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 19%);
+  grid-template-rows: 48px 48px 48px 48px 48px;
+  box-shadow: -1px 0px 0px 0px var(--bg-very-light-gray),
+    1px 0px 0px 0px var(--bg-very-light-gray),
+    0px 1px 0px 0px var(--bg-very-light-gray);
+}

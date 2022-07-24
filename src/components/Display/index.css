@@ -1,0 +1,8 @@
+@import "../../assets/colors.css";
+
+.display {
+  grid-column: span 5;
+  background-color: var(--bg-medium-gray);
+  color: white;
+  overflow: hidden;
+}
