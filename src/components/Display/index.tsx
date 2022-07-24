@@ -5,7 +5,12 @@ interface DisplayProps {
 }
 
 const Display = (props: DisplayProps) => {
-  return <div className="display">{props.value}</div>;
+  return (
+    <div>
+      <div className="display">{props.value}</div>
+      <div className="shadow"></div>
+    </div>
+  );
 };
 
 export default Display;

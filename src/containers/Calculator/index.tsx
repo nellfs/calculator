@@ -8,7 +8,7 @@ const Calculator = () => {
   return (
     <div className="calculator">
       <div className="display">
-        <Display value={100}></Display>
+        <Display value={"test"}></Display>
       </div>
       <div className="buttons">
         <Button label="del"></Button>
@@ -34,7 +34,7 @@ const Calculator = () => {
         <Button label="."></Button>
         <Button label="%"></Button>
         <Button label="+"></Button>
-        <Button label="="></Button>
+        <Button label="=" double></Button>
       </div>
     </div>
   );
