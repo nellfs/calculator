@@ -11,20 +11,19 @@ export default class Calculator extends Component {
   }
 
   clearMemory() {
-    console.log("limpar");
+    console.log("clear");
   }
 
-  setOperation(operation: string) {
+  setOperation(operation?: string) {
     console.log(operation);
   }
-
   addDigit(n: string) {
     console.log(n);
   }
 
   render() {
     const addDigit = (n: string) => this.addDigit(n);
-    const setOperation = (operation: string) => this.setOperation(operation);
+    const setOperation = (operation?: string) => this.setOperation(operation);
     return (
       <div className="calculator">
         <div className="display">
@@ -32,7 +31,7 @@ export default class Calculator extends Component {
         </div>
         <div className="buttons">
           <Button label="del" click={() => this.clearMemory()} />
-          <Button label="(" />
+          <Button label="(" click={setOperation} />
           <Button label=")" />
           <Button label="mod" />
           <Button label="π" />
