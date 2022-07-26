@@ -5,13 +5,13 @@ interface ButtonProps {
   type?: "submit" | "reset" | "button";
   double?: true;
   disabled?: boolean;
-  click?: () => {} | string;
+  click?: () => void;
 }
 
 const Button = (props: ButtonProps) => {
   return (
     <button
-      // onClick={props.click ? (e) => props.click(props.label) : ""}
+      onClick={(e) => props.click && props.click()}
       className={`button 
         ${props.double ? "result" : ""}
     `}
