@@ -11,7 +11,7 @@ interface ButtonProps {
 const Button = (props: ButtonProps) => {
   return (
     <button
-      onClick={(e) => props.click && props.click()}
+      onClick={props.click}
       className={`button 
         ${props.double ? "result" : ""}
     `}
