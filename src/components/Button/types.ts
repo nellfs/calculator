@@ -8,3 +8,8 @@ export enum OperationType {
   Subtract,
   Equals,
 }
+
+export type OperationAction = {
+  operator: OperationType;
+  payload: string;
+};
