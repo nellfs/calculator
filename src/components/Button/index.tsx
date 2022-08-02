@@ -1,22 +1,21 @@
+import { ReactNode } from "react";
 import "./index.css";
+import { InputType } from "./types";
 
 interface ButtonProps {
-  label: string | number;
-  type?: "submit" | "reset" | "button";
+  type: keyof typeof InputType;
   double?: true;
-  disabled?: boolean;
-  click?: () => void;
+  children: ReactNode;
 }
 
 const Button = (props: ButtonProps) => {
   return (
     <button
-      onClick={props.click}
       className={`button 
         ${props.double ? "result" : ""}
     `}
     >
-      {props.label}
+      {props.children}
     </button>
   );
 };

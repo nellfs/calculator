@@ -4,14 +4,6 @@ import "./index.css";
 import Button from "../../components/Button";
 import Display from "../../components/Display";
 
-const initialState = {
-  displayValue: "0",
-  clearDisplay: false,
-  operation: null,
-  values: [0, 0],
-  current: 0,
-};
-
 const Calculator = () => {
   const addNumber = (n: number | string) => {
     setState({ ...state, displayValue: state.displayValue + n });
@@ -24,35 +16,32 @@ const Calculator = () => {
         <Display value={state.displayValue}></Display>
       </div>
       <div className="buttons">
-        <Button
-          label="del"
-          click={() => {
-            setState({ ...state, displayValue: "" });
-          }}
-        />
-        <Button label="(" />
-        <Button label=")" />
-        <Button label="mod" />
-        <Button label="π" />
-        <Button label="7" click={addNumber(7)} />
-        <Button label="8" />
-        <Button label="9" />
-        <Button label="÷" />
-        <Button label="√" />
-        <Button label="4" />
-        <Button label="5" />
-        <Button label="6" />
-        <Button label="×" />
-        <Button label="×2" />
-        <Button label="1" />
-        <Button label="2" />
-        <Button label="3" />
-        <Button label="-" />
-        <Button label="0" />
-        <Button label="." />
-        <Button label="%" />
-        <Button label="+" />
-        <Button label="=" double />
+        <Button type="OPERATION">del</Button>
+        <Button type="OPERATION">(</Button>
+        <Button type="OPERATION">)</Button>
+        <Button type="OPERATION">mod</Button>
+        <Button type="OPERATION">π</Button>
+        <Button type="NUMERICAL">7</Button>
+        <Button type="NUMERICAL">8</Button>
+        <Button type="NUMERICAL">9</Button>
+        <Button type="OPERATION">÷ </Button>
+        <Button type="OPERATION">√</Button>
+        <Button type="NUMERICAL">4</Button>
+        <Button type="NUMERICAL">5</Button>
+        <Button type="NUMERICAL">6</Button>
+        <Button type="OPERATION">×</Button>
+        <Button type="OPERATION">×2</Button>
+        <Button type="NUMERICAL">1</Button>
+        <Button type="NUMERICAL">2</Button>
+        <Button type="NUMERICAL">3</Button>
+        <Button type="OPERATION">-</Button>
+        <Button type="NUMERICAL">0</Button>
+        <Button type="OPERATION">.</Button>
+        <Button type="OPERATION">%</Button>
+        <Button type="OPERATION">+</Button>
+        <Button type="OPERATION" double>
+          =
+        </Button>
       </div>
     </div>
   );
