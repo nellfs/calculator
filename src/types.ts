@@ -1,14 +1,15 @@
 export type State = {
-  displayValue: string;
-  clearDisplay: false;
-  operation: null;
-  values: object;
-  current: number;
+  display: string;
+  operator: string | null;
+  firstOperand: number | null;
+  waitingForSecondOperand: boolean;
+  memory: number;
 };
 
 export enum InputType {
   NUMERICAL = "NUMERICAL",
   OPERATION = "OPERATION",
+  CLEAR = "CLEAR",
 }
 
 export type InputAction = {

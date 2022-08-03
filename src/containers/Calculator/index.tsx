@@ -5,15 +5,10 @@ import Button from "../../components/Button";
 import Display from "../../components/Display";
 
 const Calculator = () => {
-  const addNumber = (n: number | string) => {
-    setState({ ...state, displayValue: state.displayValue + n });
-  };
-
-  const [state, setState] = useState({ ...initialState });
   return (
     <div className="calculator">
       <div className="display">
-        <Display value={state.displayValue}></Display>
+        <Display value={"nothing here"}></Display>
       </div>
       <div className="buttons">
         <Button type="OPERATION">del</Button>
