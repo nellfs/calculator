@@ -1,3 +1,5 @@
+import React from "react";
+import { Context } from "../../context";
 import "./index.css";
 
 interface DisplayProps {
@@ -5,9 +7,10 @@ interface DisplayProps {
 }
 
 const Display = (props: DisplayProps) => {
+  const [state] = React.useContext(Context);
   return (
     <div>
-      <div className="display">{props.value}</div>
+      <div className="display">{`${state?.display ? state.display : "0"}`}</div>
       <div className="shadow"></div>
     </div>
   );

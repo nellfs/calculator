@@ -1,7 +1,12 @@
 import Calculator from "./containers/Calculator/";
+import ContextProvider from "./context";
 
 function App() {
-  return <Calculator />;
+  return (
+    <ContextProvider>
+      <Calculator />;
+    </ContextProvider>
+  );
 }
 
 export default App;

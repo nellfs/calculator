@@ -4,15 +4,24 @@ export const INITIAL_STATE: State = {
   display: "0",
   operator: null,
   firstOperand: null,
-  waitingForSecondOperand: false,
+  waitingForSecondOperand: true,
   memory: 0,
 };
 
 export default function reducer(state: State, action: InputAction) {
   const { type, payload } = action;
   switch (type) {
-    case InputType.NUMERICAL: {
+    case InputType.NUMBER: {
       const number = payload;
+
+      let { display } = state;
+
+      display = state.display + number;
+
+      return {
+        ...state,
+        display,
+      };
     }
     case InputType.OPERATION: {
       const nextOperator = payload;
@@ -20,7 +29,8 @@ export default function reducer(state: State, action: InputAction) {
     case InputType.CLEAR: {
       return {
         ...state,
-        display: "clear",
+        display: "0",
+        waitingForSecondOperand: false,
       };
     }
   }
