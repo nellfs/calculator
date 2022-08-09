@@ -1,8 +1,15 @@
 :root {
+  --bg-very-very-very-very-light-gray: #656565;
+  --bg-point-top: #5c5c5c;
+  --bg-very-very-very-light-gray: #545454;
   --bg-very-very-light-gray: #535353;
+  --bg-results-gray: #404040;
   --bg-very-light-gray: #3a3a3a;
   --bg-gray: #3a3a3a;
+  --bg-topbar-line: #4a4a4a;
   --bg-dark-gray: #242424;
+  --bg-topbar-border: #454545;
+  --bg-topbar-background: #303030;
   --bg-medium-gray: #363636;
   --bg-active-gray: #666666;
   --bg-blue: #3584e4;

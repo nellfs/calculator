@@ -1,0 +1,24 @@
+@import "../../assets/colors.css";
+
+.results {
+  height: 119px;
+  border-radius: 0px;
+  background: var(--bg-results-gray);
+  box-shadow: -1px 0px 0px 0px var(--bg-very-very-light-gray),
+    1px 0px 0px 0px var(--bg-very-very-light-gray),
+    0px -1px 0px 0px var(--bg-topbar-line);
+}
+
+.point-left {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  box-shadow: -1px -1px 0px 0px var(--bg-point-top);
+}
+
+.point-right {
+  margin-left: 100%;
+  width: 1px;
+  height: 1px;
+  box-shadow: 0px -1px 0px 0px var(--bg-point-top);
+}

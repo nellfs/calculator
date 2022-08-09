@@ -1,0 +1,11 @@
+@import "../../assets/colors.css";
+
+.topbar {
+  height: 45px;
+  background: var(--bg-topbar-background);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  box-shadow: -1px 0px 0px 0px var(--bg-topbar-border),
+    1px 0px 0px 0px var(--bg-topbar-border),
+    0px -1px 0px 0px var(--bg-topbar-border);
+}

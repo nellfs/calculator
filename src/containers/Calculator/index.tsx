@@ -3,15 +3,23 @@ import "./index.css";
 
 import Button from "../../components/Button";
 import Display from "../../components/Display";
+import Results from "../../components/Results";
+import TopBar from "../../components/TopBar";
 
 const Calculator = () => {
   return (
     <div className="calculator">
+      <div className="topbar">
+        <TopBar />
+      </div>
+      <div className="results">
+        <Results />
+      </div>
       <div className="display">
         <Display value={"nothing here"}></Display>
       </div>
       <div className="buttons">
-        <Button type="OPERATION">del</Button>
+        <Button type="CLEAR">del</Button>
         <Button type="OPERATION">(</Button>
         <Button type="OPERATION">)</Button>
         <Button type="OPERATION">mod</Button>
@@ -31,7 +39,7 @@ const Calculator = () => {
         <Button type="NUMBER">3</Button>
         <Button type="OPERATION">-</Button>
         <Button type="NUMBER">0</Button>
-        <Button type="OPERATION">.</Button>
+        <Button type="DECIMAL">.</Button>
         <Button type="OPERATION">%</Button>
         <Button type="OPERATION">+</Button>
         <Button type="OPERATION" double>

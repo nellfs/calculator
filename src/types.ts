@@ -9,6 +9,7 @@ export type State = {
 export enum InputType {
   NUMBER = "NUMBER",
   OPERATION = "OPERATION",
+  DECIMAL = "DECIMAL",
   CLEAR = "CLEAR",
 }
 

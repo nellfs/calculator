@@ -1,7 +1,7 @@
 import { InputAction, InputType, State } from "./types";
 
 export const INITIAL_STATE: State = {
-  display: "0",
+  display: "",
   operator: null,
   firstOperand: null,
   waitingForSecondOperand: true,
@@ -13,25 +13,37 @@ export default function reducer(state: State, action: InputAction) {
   switch (type) {
     case InputType.NUMBER: {
       const number = payload;
-
       let { display } = state;
 
-      display = state.display + number;
+      display += number;
 
       return {
         ...state,
         display,
       };
     }
-    case InputType.OPERATION: {
-      const nextOperator = payload;
+    case InputType.OPERATION:
+      return state;
+      break;
+
+    case InputType.DECIMAL: {
+      const operator = payload;
+      let { display } = state;
+      if (!display.includes(".")) display += ".";
+      return {
+        ...state,
+        display,
+      };
     }
+
     case InputType.CLEAR: {
       return {
         ...state,
-        display: "0",
+        display: "",
         waitingForSecondOperand: false,
       };
     }
+    default:
+      return state;
   }
 }

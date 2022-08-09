@@ -10,7 +10,11 @@ const Display = (props: DisplayProps) => {
   const [state] = React.useContext(Context);
   return (
     <div>
-      <div className="display">{`${state?.display ? state.display : "0"}`}</div>
+      <div className="display">
+        <div className="display-point-left" />
+        <div className="display-point-right" />
+        <div className="text">{`${state?.display ? state.display : ""}`}</div>
+      </div>
       <div className="shadow"></div>
     </div>
   );
